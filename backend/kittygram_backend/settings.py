@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
-if ALLOWED_HOSTS:
+if ALLOWED_HOSTS and isinstance(ALLOWED_HOSTS, str) and '[' in ALLOWED_HOSTS:
     ALLOWED_HOSTS = json.loads(ALLOWED_HOSTS)
 
 INSTALLED_APPS = [
