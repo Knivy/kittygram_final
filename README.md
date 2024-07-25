@@ -28,58 +28,21 @@ Github Actions, Docker, docker-compose
 
 Сайт должен стать доступен по адресу в настройках.
 
-### Как запустить проект на локальном компьютере
+# Как запустить проект на локальном сервере
 
-Клонировать репозиторий и перейти в него в командной строке:
+Установить и запустить Docker Desktop на Windows/Mac или docker и docker compose на Linux
 
-```
-git clone https://github.com/Knivy/kittygram_final.git
-```
+В терминале в корне проекта выполнить:
 
 ```
-cd kittygram_final/backend
+docker compose up
+docker compose exec backend python manage.py migrate
+docker compose exec backend python manage.py collectstatic
+docker compose exec backend cp -r /app/collected_static/. /backend_static/static/  
 ```
 
-Cоздать и активировать виртуальное окружение:
-
-* Если у вас Linux/macOS
-
-    ```
-    python3 -m venv env
-    source env/bin/activate
-    ```
-
-* Если у вас windows
-
-    ```
-    python -m venv env
-    source env/scripts/activate
-    ```
-
-```
-python3 -m pip install --upgrade pip
-```
-
-Установить зависимости из файла requirements.txt:
-
-```
-pip install -r requirements.txt
-```
-
-Выполнить миграции:
-
-```
-python3 manage.py migrate
-```
-
-Запустить проект:
-
-```
-python3 manage.py runserver
-```
-
-Сайт должен стать доступен по адресу, который будет указан в выводе терминала.
+Проект будет доступен по адресу http://localhost:9000
 
 # Пример запроса к API при локальном подключении
 
-При переходе по адресу http://localhost/api/cats должен отобразиться список котов.
+При переходе по адресу http://localhost:9000/api/cats должен отобразиться список котов.
