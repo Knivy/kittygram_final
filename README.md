@@ -1,6 +1,6 @@
 Проект сайта Kittygram для загрузки фотографий котов. Июль 2024.
 
-![Workflow badge](https://github.com/Knivy/kittygram_final/actions/workflows/main.yml/badge.svg)
+![Workflow badge!](https://github.com/Knivy/kittygram_final/actions/workflows/main.yml/badge.svg)
 
 # Команда
 
