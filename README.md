@@ -10,6 +10,8 @@
 
 Ревьюер: Денис Унтевский.
 
+Наставники: Николай Минякин, Ритис Бараускас.
+
 # Технологии
 
 Github Actions, Docker, docker-compose
@@ -31,6 +33,10 @@ Github Actions, Docker, docker-compose
 # Как запустить проект на локальном сервере
 
 Установить и запустить Docker Desktop на Windows/Mac или docker и docker compose на Linux
+Склонировать проект
+```
+git clone https://github.com/Knivy/kittygram_final.git
+```
 
 В терминале в корне проекта выполнить:
 
