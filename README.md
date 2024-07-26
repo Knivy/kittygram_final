@@ -14,7 +14,7 @@
 
 # Технологии
 
-Github Actions, Docker, docker-compose
+Github Actions, Docker, docker-compose, Nginx, Django
 
 # Как запустить на удаленном сервере
 
