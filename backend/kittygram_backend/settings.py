@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv("DEBUG", 'False').lower() != 'false'
+DEBUG = os.getenv('DEBUG', 'False').lower() != 'false'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
 if ALLOWED_HOSTS and isinstance(ALLOWED_HOSTS, str) and '[' in ALLOWED_HOSTS:
