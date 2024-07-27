@@ -17,6 +17,7 @@ services:
       - media:/app/media/
     depends_on:
       - db  
+      - redis
   frontend:
     env_file: .env
     build: ./frontend/
@@ -32,4 +33,6 @@ services:
       - static:/static
       - media:/app/media/
     depends_on:
-      - backend   
+      - backend
+  redis:
+    build: ./redis/      
